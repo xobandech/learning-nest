@@ -1,0 +1,6 @@
+<script>
+  const eventSource = new EventSource('http://localhost:3000/sse');
+  eventSource.onmessage = ({ data }) => {
+    console.log('New message', JSON.parse(data));
+  };
+</script>
